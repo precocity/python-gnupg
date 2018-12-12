@@ -202,8 +202,6 @@ def binary(data):
 
     if _py3k and isinstance(data, str):
         encoded = coder.encode(data)[0]
-    elif not _py3k and type(data) is not str:
-        encoded = coder.encode(data)[0]
     else:
         encoded = data
 

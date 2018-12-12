@@ -1,10 +1,10 @@
 SHELL=/bin/sh
-TESTDIR=./pretty_bad_protocol/test
+TESTDIR=./gnupg/test
 TESTHANDLE=$(TESTDIR)/test_gnupg.py
-FILES=$(SHELL find ./pretty_bad_protocol/ -name "*.py" -printf "%p,")
+FILES=$(SHELL find ./gnupg/ -name "*.py" -printf "%p,")
 PYTHON=$(SHELL which python)
 PYTHON3=$(SHELL which python3)
-PKG_NAME=pretty_bad_protocol
+PKG_NAME=python-gnupg
 DOC_DIR=docs
 DOC_BUILD_DIR:=$(DOC_DIR)/_build
 DOC_HTML_DIR:=$(DOC_BUILD_DIR)/html
@@ -25,7 +25,7 @@ pycremoval:
 	find . -name '*.py[co]' -exec rm -f {} ';'
 
 cleanup-src: pycremoval
-	cd pretty_bad_protocol/ && rm -f \#*\#
+	cd gnupg/ && rm -f \#*\#
 
 cleanup-tests: cleanup-src
 	cd $(TESTDIR) && rm -f \#*\#
@@ -144,7 +144,7 @@ docs-clean:
 	-rm -rf $(DOC_BUILD_DIR)
 
 docs-completely-new:
-	sphinx-apidoc -F -A "isis agora lovecruft" -H "pretty-bad-protocol" -o $(DOC_DIR) pretty_bad_protocol/ tests/
+	sphinx-apidoc -F -A "isis agora lovecruft" -H "pretty-bad-protocol" -o $(DOC_DIR) gnupg/ tests/
 
 docs-html:
 	cd $(DOC_DIR) && make clean && make html

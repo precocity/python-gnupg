@@ -57,15 +57,15 @@ if sys.version_info[0] == 2:
 else:
     from unittest import mock
 
-from pretty_bad_protocol import gnupg
+import gnupg
 
 ## see PEP-366 http://www.python.org/dev/peps/pep-0366/
 print("NAME: %r" % __name__)
 print("PACKAGE: %r" % __package__)
 try:
-    from pretty_bad_protocol.gnupg import _util
-    from pretty_bad_protocol.gnupg import _parsers
-    from pretty_bad_protocol.gnupg import _logger
+    from gnupg import _util
+    from gnupg import _parsers
+    from gnupg import _logger
 except (ImportError, ValueError) as ierr:
     raise SystemExit(str(ierr))
 

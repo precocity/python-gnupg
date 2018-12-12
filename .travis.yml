@@ -19,4 +19,4 @@ before_script:
   - make test-before
 
 script:
-  - python pretty_bad_protocol/test/test_gnupg.py basic encodings parsers keyrings listkeys genkey sign crypt expiration signing
+  - python gnupg/test/test_gnupg.py basic encodings parsers keyrings listkeys genkey sign crypt expiration signing

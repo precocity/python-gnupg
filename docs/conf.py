@@ -61,7 +61,7 @@ copyright = u'2013-2014, Isis Agora Lovecruft'
 # built documents.
 #
 # The short X.Y version.
-from pretty_bad_protocol import gnupg
+import gnupg
 version = gnupg.__version__
 # The full version, including alpha/beta/rc tags.
 release = gnupg.__version__

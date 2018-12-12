@@ -49,7 +49,7 @@ and import the module like so::
 
 .. code-block:: python
 
-    >>> from pretty_bad_protocol import gnupg
+    >>> import gnupg
 
 The primary interface class you'll likely want to interact with is ``gnupg.GPG``:
 
